@@ -1,12 +1,14 @@
 /* eslint-disable react/destructuring-assignment */
+import './Country.css';
+
 function Country(props) {
-    const { name, population, area, region } = props.country;
+    const { area, name, flags, flag, population } = props.country;
     return (
         <div className="Country">
-            <h2>Name: {name.common}</h2>
-            <h4>Population: {population}</h4>
-            <h4>Area: {area}</h4>
-            <h4>Region: {region}</h4>
+            <h3>Name: {name.common}</h3>
+            <img src={flags.png} alt={flag} />
+            <p>Area: {area}</p>
+            <p>Population: {population}</p>
         </div>
     );
 }
