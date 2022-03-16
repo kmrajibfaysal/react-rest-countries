@@ -12,6 +12,7 @@ function Countries() {
     return (
         <div className="Countries">
             <h1>Visiting Every country of the World!!</h1>
+            <h2>Checking the country details!</h2>
             <h3>Available countries: {countries.length}</h3>
             <div className="countries-container">
                 {countries.map((country) => (
