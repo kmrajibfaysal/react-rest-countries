@@ -3,14 +3,14 @@
   text-align: center;
 }
 
-.loadCountries {
+.Countries {
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
 }
 
-.country {
+.Country {
   margin: 5px;
   width: 50%;
   border-radius: 10px;
