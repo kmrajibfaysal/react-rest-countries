@@ -19,9 +19,28 @@ function LoadCountries() {
             .then((data) => setCountries(data));
     }, []);
     return (
-        <div>
+        <div className="loadCountries">
             <h1>Visiting Every country of the World!!</h1>
             <h3>Available countries: {countries.length}</h3>
+            {countries.map((country) => (
+                <Country
+                    name={country.name.common}
+                    population={country.population}
+                    area={country.area}
+                    region={country.region}
+                />
+            ))}
+        </div>
+    );
+}
+
+function Country({ name, population, area, region }) {
+    return (
+        <div className="country">
+            <h2>Name: {name}</h2>
+            <h4>Population: {population}</h4>
+            <h4>Area: {area}</h4>
+            <h4>Region: {region}</h4>
         </div>
     );
 }
